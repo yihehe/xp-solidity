@@ -1,0 +1,131 @@
+{
+	"compiler": {
+		"version": "0.8.3+commit.8d00100c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_candidate",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "certify",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_candidate",
+						"type": "address"
+					}
+				],
+				"name": "getHistory",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "_organization",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "_somethingToPersist",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "_isCertified",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Xp.Experience[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_organization",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_somethingToPersist",
+						"type": "string"
+					}
+				],
+				"name": "propose",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Main interface for interacting with a profile",
+			"kind": "dev",
+			"methods": {},
+			"title": "Xp",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Xp.sol": "Xp"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Xp.sol": {
+			"keccak256": "0x428b6ef0e32a434116960018e6af62e0bea020edebd9c88940b71aa8d0da6794",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8a0e05b4bb5a9f97c053aa46ac86a22458c4adc149ee5ed4ad94e1537094f1eb",
+				"dweb:/ipfs/QmQmZcExveVP5ad9BLcMgncEmxVN8wtoxJHqNJd8evZhy8"
+			]
+		}
+	},
+	"version": 1
+}
