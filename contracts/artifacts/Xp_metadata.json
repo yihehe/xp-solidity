@@ -50,6 +50,11 @@
 					},
 					{
 						"internalType": "string",
+						"name": "_encrypted",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
 						"name": "_hash",
 						"type": "string"
 					}
@@ -113,6 +118,46 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "xps",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "_organization",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "_encrypted",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_hash",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "_isCertified",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Xp.Experience[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -145,11 +190,11 @@
 	},
 	"sources": {
 		"contracts/Xp.sol": {
-			"keccak256": "0xf3aa9f7a9bc3642a8756fa22df94d8c314704d16515a76e6d51cc11c8a11a685",
+			"keccak256": "0xf0d6f402a3bc8cb326d4f8962715e7921aa2cde47ecc3a34dca3629a4ad3682b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b1f76d48e6644240dc00d32a8c7ea41552b3c6a8a99d6e147295ca0a1862e9d7",
-				"dweb:/ipfs/QmWVUdAdUCCxNCPM4X6L5rrzvS4P6i6e66un55pJwWUBY6"
+				"bzz-raw://c8d47b4583cc9880eefb08b2bf2e3c4c5dfbca515c35083f2ba3643d8b413f8e",
+				"dweb:/ipfs/QmfPL8rfH1uETogxajgP5FHfB18fnV5LuZZzGsEakvuYUc"
 			]
 		}
 	},

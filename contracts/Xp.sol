@@ -18,6 +18,7 @@ contract Xp {
     struct Experience {
         uint256 _id;
         address _organization;
+        string _encrypted; // serve as storage but only viewable by uploader
         string _hash; // which hash? keccak256?
         bool _isCertified;
     }
@@ -33,13 +34,14 @@ contract Xp {
     }
     
     // called by candidate
-    function propose(address _organization, string memory _hash) external {
+    function propose(address _organization, string memory _encrypted, string memory _hash) external {
         // verify candidate is not organization
         // dedupe
         
         Experience memory experience = Experience(
             profiles[msg.sender]._experiences.length,
             _organization,
+            _encrypted,
             _hash,
             false
         );
@@ -75,13 +77,18 @@ contract Xp {
         profiles[msg.sender]._permissions[_organization]._latestGrant._encryptedHashes = _encryptedHashes;
     }
     
+    // called by candidate (so they can decrypt)
+    function xps() external view returns(Experience[] memory) {
+        return profiles[msg.sender]._experiences;
+    }
+    
     // called by requesting organization
     function request(address _candidate) external view returns(Grant memory) {
         return profiles[_candidate]._permissions[msg.sender]._latestGrant;
     }
     
     // called by requesting organization
-    // not efficient, but run off chain (view)
+    // not efficient, but can run off chain (view)
     function verify(address _candidate, string[] memory hashes) external view returns(bool) {
         for (uint i = 0; i < hashes.length; i++) {
             bool hashVerified = false;
