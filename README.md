@@ -10,6 +10,13 @@ The recruiting process for any organization is long and rigorous, and one of the
 | Organization R | request  | Fetch the latest encrypted hash                                               | Candidate address                           |                                                | no  |
 | Organization R | verify   | Verifies a list of hashes has been certified                                  | Candidate C address List of hashes          |                                                | no  |
 
- # JS encrypt/decrypt:
- https://codesandbox.io/s/youthful-star-vjq8f?file=/src/index.js
- 
+## JS encrypt/decrypt:
+https://codesandbox.io/s/youthful-star-vjq8f?file=/src/index.js
+
+## Getting started
+https://remix-ide.readthedocs.io/en/latest/remixd.html
+```
+npm install -g @remix-project/remixd
+remixd -s . --remix-ide https://remix.ethereum.org 
+```
+
