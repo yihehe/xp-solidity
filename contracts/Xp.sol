@@ -7,7 +7,8 @@ pragma solidity ^0.8.3;
  * @dev Main interface for interacting with a profile
  */
 contract Xp {
-    
+     
+    event PermissionGranted(address _candidate, address _organization, string _encryptedHashes);
     mapping(address => Profile) profiles;
     
     struct Profile {
@@ -75,6 +76,7 @@ contract Xp {
         
         profiles[msg.sender]._permissions[_organization]._latestGrant._grantTime = block.timestamp;
         profiles[msg.sender]._permissions[_organization]._latestGrant._encryptedHashes = _encryptedHashes;
+        emit PermissionGranted(msg.sender, _organization, _encryptedHashes);
     }
     
     // called by candidate (so they can decrypt)

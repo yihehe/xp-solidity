@@ -6,6 +6,31 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_candidate",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_organization",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_encryptedHashes",
+						"type": "string"
+					}
+				],
+				"name": "PermissionGranted",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -190,11 +215,11 @@
 	},
 	"sources": {
 		"contracts/Xp.sol": {
-			"keccak256": "0xf0d6f402a3bc8cb326d4f8962715e7921aa2cde47ecc3a34dca3629a4ad3682b",
+			"keccak256": "0x6a79404609788e4935a7ffc966e644196a02ceecffed356606de328d0fc1c90f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c8d47b4583cc9880eefb08b2bf2e3c4c5dfbca515c35083f2ba3643d8b413f8e",
-				"dweb:/ipfs/QmfPL8rfH1uETogxajgP5FHfB18fnV5LuZZzGsEakvuYUc"
+				"bzz-raw://2802fbe44f0b3bf9e11bc0369a2d3bb44f6e62782ff35b4d840fe08169aa8906",
+				"dweb:/ipfs/QmXJZm5YcYG9Ri3pn4xkvUVcBqgBQShKet1c9jnhihKTfo"
 			]
 		}
 	},
